@@ -1,6 +1,5 @@
 #include "PhoneBook.hpp"
 
-
 int main(void)
 {
     PhoneBook Pb;
@@ -14,7 +13,7 @@ int main(void)
         cout << "> " << std::flush;
         if (command == "ADD")
         {
-            Pb.Get_contact_from_cin();
+            Pb.init_Start();
             Pb.contact_saved_messages();
             Pb.Welcome_print();
         }

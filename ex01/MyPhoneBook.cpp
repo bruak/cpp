@@ -1,14 +1,19 @@
 #include "PhoneBook.hpp"
+#include "Contact.hpp"
 #include <iomanip>
 
 using namespace std;
-PhoneBook::~PhoneBook(){}
 
-// MAX CONTACTS is the maximum number of contacts that can be saved in the phone book
-// this is a constant value
-// but it can be changed to any value for testing, default is 8.
+PhoneBook::PhoneBook(){
+    current_index = 0;
+}
+
+PhoneBook::~PhoneBook(){
+}
+
+
 #define MAX_CONTACTS 2
-void PhoneBook::add_contact(Person& person)
+void PhoneBook::add_person_to_phonebook(Person& person)
 {
     peoples_info[current_index % MAX_CONTACTS] = person;
     if (current_index < MAX_CONTACTS){
@@ -16,39 +21,13 @@ void PhoneBook::add_contact(Person& person)
     }
 }
 
-string PhoneBook::getInput(const string& prompt) {
-    std::string input;
-    do {
-        std::cout << prompt;
-        std::getline(std::cin, input);
-    } while (input.empty());
-    return input;
-}
-
-void PhoneBook::Get_contact_from_cin()
-{
+// bu fonksiyon aracılığıyla hpp dosyaları birbirlerinin verilerine
+// erişebilirler.
+void PhoneBook::init_Start(void){
     Person person;
-    person.firstName = getInput("Enter first name: ");
-    person.lastName = getInput("Enter last name: ");
-    person.nickName = getInput("Enter nick name: ");
-    do {
-        person.phoneNumber = getInput("Enter phone number: ");
-    } while (if_not_digit(person.phoneNumber));
-    person.darkestSecret = getInput("Enter darkest secret: ");
-    add_contact(person);
-}
-
-int PhoneBook::if_not_digit(string phone_number)
-{
-    for (int i = 0; phone_number[i] != '\0'; i++)
-    {
-        if (!isdigit(phone_number[i]))
-        {
-            cout << "Phone number is not valid" << endl;
-            return 1;
-        }
-    }
-    return 0;
+    Contact contacts;
+    person = contacts.Get_contact_from_cin();
+    add_person_to_phonebook(person);
 }
 
 void PhoneBook::Welcome_print()
@@ -62,6 +41,7 @@ void PhoneBook::Welcome_print()
         }
         cout << endl;
 }
+
 void PhoneBook::contact_saved_messages()
 {
     cout << "\033[38;5;208m\nProccess loading...\033[0m" << endl;
@@ -116,7 +96,7 @@ void PhoneBook::search_contact()
 {
     int index;
 
-    cout << "enter the index of the contact you want to search: ";
+    cout << "\033[34menter the index of the contact you want to search: \033[0m";
     while (!(cin >> index))
     {
         cin.clear();
@@ -124,13 +104,13 @@ void PhoneBook::search_contact()
         cout << "Invalid index. Please enter a valid index: ";
     }
         if (index < 0 || index >= current_index) {
-            cout << "Error: Index out of range." << endl;
-        } 
+            cout << "\033[31mError: Index out of range.\033[0m" << endl;
+            } 
         else {
 
-            cout << "---->> CONTACT #" << index << " <<----" << endl;
+            cout << "\033[35m---->> CONTACT #" << index << " <<----\033[0m" << endl;
             if (!peoples_info[index].firstName.empty())
-                cout << "First name: " << peoples_info[index].firstName << endl;
+                cout << "\033[38;5;208mFirst name: " << peoples_info[index].firstName << endl;
             if (!peoples_info[index].lastName.empty())
                 cout << "Last name: " << peoples_info[index].lastName << endl;
             if (!peoples_info[index].nickName.empty())

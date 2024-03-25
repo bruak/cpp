@@ -2,8 +2,8 @@
 #include <string>
 
 #define NON_ARG_MESSAGE "* LOUD AND UNBEARABLE FEEDBACK NOISE *"
-
-using namespace std;
+#define cout std::cout
+#define string std::string
 
 void    megaphone(char *str)
 {

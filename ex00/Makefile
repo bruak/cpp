@@ -1,4 +1,4 @@
-CC=g++ -std=c++98 -pedantic
+CC=c++ -std=c++98 -pedantic
 SRC=megaphone.cpp
 OBJ=$(SRC:.cpp=.o)
 

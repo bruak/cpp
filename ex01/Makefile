@@ -1,4 +1,4 @@
-CC=g++ -std=c++98 -g
+CC=c++ -std=c++98 -g
 SRC=MyPhoneBook.cpp Contact.cpp main.cpp
 OBJ=$(SRC:.cpp=.o)
 
