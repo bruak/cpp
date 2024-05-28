@@ -1,0 +1,109 @@
+Animal Dog constructor called
+Dog constructor called
+there is a brain now!
+Animal Cat constructor called
+Cat constructor called
+there is a brain now!
+brain removed!
+Dog destructor called
+Animal destructor called
+brain removed!
+Cat destructor called
+Animal destructor called
+Animal Dog constructor called
+Dog constructor called
+there is a brain now!
+creature(default name) constructor called
+Dog copy called (this will copy to another value)
+<Brain.cpp:32> Brain copy called. (copy 100 times)
+brain removed!
+Dog destructor called
+Animal destructor called
+brain removed!
+Dog destructor called
+Animal destructor called
+Animal Dog constructor called
+Dog constructor called
+there is a brain now!
+Animal Dog constructor called
+Dog constructor called
+there is a brain now!
+Animal Cat constructor called
+Cat constructor called
+there is a brain now!
+Animal Cat constructor called
+Cat constructor called
+there is a brain now!
+brain removed!
+Dog destructor called
+Animal destructor called
+brain removed!
+Dog destructor called
+Animal destructor called
+brain removed!
+Cat destructor called
+Animal destructor called
+brain removed!
+Cat destructor called
+Animal destructor called
+Animal Dog constructor called
+Dog constructor called
+there is a brain now!
+Animal Dog constructor called
+Dog constructor called
+there is a brain now!
+Animal Dog constructor called
+Dog constructor called
+there is a brain now!
+Animal Dog constructor called
+Dog constructor called
+there is a brain now!
+Animal Dog constructor called
+Dog constructor called
+there is a brain now!
+brain removed!
+Dog destructor called
+Animal destructor called
+brain removed!
+Dog destructor called
+Animal destructor called
+brain removed!
+Dog destructor called
+Animal destructor called
+brain removed!
+Dog destructor called
+Animal destructor called
+brain removed!
+Dog destructor called
+Animal destructor called
+Animal Dog constructor called
+Dog constructor called
+there is a brain now!
+Animal Cat constructor called
+Cat constructor called
+there is a brain now!
+Animal Dog constructor called
+Dog constructor called
+there is a brain now!
+brain removed!
+Dog destructor called
+Animal destructor called
+brain removed!
+Cat destructor called
+Animal destructor called
+brain removed!
+Dog destructor called
+Animal destructor called
+Animal Dog constructor called
+Dog constructor called
+there is a brain now!
+HAWWWĞĞWĞĞWĞWW HAWWAĞAWĞAĞWĞWĞĞWĞWĞ HWHWAWHHAWHWAHWAHWAH
+brain removed!
+Dog destructor called
+Animal destructor called
+Animal Dog constructor called
+Dog constructor called
+there is a brain now!
+brain removed!
+Dog destructor called
+Animal destructor called
