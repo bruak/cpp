@@ -4,8 +4,7 @@ Weapon::Weapon(std::string const &weapon_type){
     type = weapon_type;
 }
 
-Weapon::~Weapon(){
-}
+Weapon::~Weapon() {}
 
 std::string Weapon::getType() const{
     return type;

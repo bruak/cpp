@@ -57,7 +57,7 @@ void Harl::error(void) {
     return;
 }
 
-void harlComplains(void) {
+void harlComplainsMessage(void) {
     std::cout << "Harl's burger problem\n";
 
 

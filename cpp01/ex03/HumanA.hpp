@@ -2,7 +2,7 @@
 #include <iostream>
 #include "Weapon.hpp"
 
-class HumanA{
+class HumanA {
 
 public:
     HumanA(std::string name, Weapon &weapon);

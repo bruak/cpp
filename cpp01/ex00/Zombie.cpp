@@ -1,6 +1,6 @@
 #include "Zombie.hpp"
 
-Zombie::Zombie(std::string incomingName)
+Zombie::	Zombie(std::string incomingName)
 {
 	this->Name = incomingName;
 }

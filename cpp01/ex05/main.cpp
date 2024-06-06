@@ -10,7 +10,7 @@ int main(int ac, char *av[]){
     if (ac != 1)
         return (std::cout << USAGE), 1;       
     else{
-        harlComplains();
+        harlComplainsMessage();
         std::cin >> level;
         harl.complain(level);
     }

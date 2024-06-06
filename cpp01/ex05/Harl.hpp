@@ -18,4 +18,4 @@ class Harl {
 };
 
 
-void harlComplains(void);
+void harlComplainsMessage(void);

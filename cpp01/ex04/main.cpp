@@ -21,40 +21,40 @@ int handleError(std::ifstream &file, const std::string &errorMsg) {
     return ERROR_EXIT;
 }
 
-std::string replaceAllOccurrences(std::string data, const std::string &toFind, const std::string &toReplace) {
-    size_t pos = data.find(toFind);
+std::string replaceAllOccurrences(std::string line, const std::string &toFind, const std::string &toReplace) {
+    size_t pos = line.find(toFind);
     while (pos != std::string::npos) {
-        data.replace(pos, toFind.length(), toReplace);
-        pos = data.find(toFind, pos + toReplace.length());
+        line.replace(pos, toFind.length(), toReplace);
+        pos = line.find(toFind, pos + toReplace.length());
     }
-    return data;
+    return line;
 }
 
 int main(int argc, char* argv[]) {
+
     if (argc != 4) {
         displayUsage();
         return ERROR_EXIT;
     }
 
-    std::string inputFile = argv[1];
+    std::string file_name = argv[1];
     std::string toFind = argv[2];
     std::string toReplace = argv[3];
 
-    std::ifstream sourceFile(inputFile.c_str());
-    if (!sourceFile.is_open()) {
-        return handleError(sourceFile, SOURCE_FILE_ERROR);
-    }
+    std::ifstream sourceFile(file_name.c_str());
 
-    std::ofstream outputFile((inputFile + FILE_EXTENSION).c_str(), std::ios::out | std::ios::trunc);    
-    if (!outputFile.is_open()) {
+    if (!sourceFile.is_open())
+        return handleError(sourceFile, SOURCE_FILE_ERROR);
+
+    std::ofstream outputFile((file_name + FILE_EXTENSION).c_str(), std::ios::out | std::ios::trunc);    
+    if (!outputFile.is_open())
         return handleError(sourceFile, OUTPUT_FILE_ERROR);
-    }
+
     std::string line;
     while (std::getline(sourceFile, line)) {
         outputFile << replaceAllOccurrences(line, toFind, toReplace);
-        if (!sourceFile.eof()) {
+        if (!sourceFile.eof()) 
             outputFile << NEW_LINE;
-        }
     }
 
     sourceFile.close();
@@ -62,3 +62,4 @@ int main(int argc, char* argv[]) {
 
     return 0;
 }
+ 
