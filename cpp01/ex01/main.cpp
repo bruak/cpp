@@ -16,3 +16,14 @@ int main()
 
 	return (0);
 }
+
+
+/*
+	istenilen zombi sayısı kadar işaretçi oluşturuluyor.
+	bu işaretçinin ilk adresi geliyor c dilindeki arrayler gibi.
+	sonra bu işaretçiye zombi sayısı kadar dolaşarak isim ekleniyor.
+	sonra bu işaretçi return ediliyor.
+	ilk adresten başlayarak zombi sayısı kadar dolaşarak isimler yazdırılıyor.
+	sonra işaretçi siliniyor. [] olarak silmesinin nedeni new [] olarak açıldıktan sonra
+	[] olarak silinmesi gerektiğidir. çünkü [] ile silinip tüm destructorlar çağrılır.
+*/

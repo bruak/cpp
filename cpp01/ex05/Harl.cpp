@@ -22,8 +22,13 @@ void Harl::complain(std::string level) {
         &Harl::info,
         &Harl::warning,
         &Harl::error
-    };
-    
+    }; // burda referans olarak değil fonksiyon adresi almak için kullanılıyor.
+    /*
+    Yes, you're correct. The & symbol is used here to get the address of the member functions debug, info, warning, and error of the Harl class.
+    In C++, you need to use the & operator to get the address of a function (including member functions of a class) to store it in a function pointer.
+    So, &Harl::debug is a pointer to the member function debug of the Harl class. The array actions is an array of such pointers.
+    Later, (this->*actions[i])() is used to call the function pointed to by actions[i] on the object *this.
+    */
     std::string levels[] = {
         "DEBUG",
         "INFO",
