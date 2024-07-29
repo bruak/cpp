@@ -1,4 +1,4 @@
-CC=c++ -std=c++98 -pedantic
+CC=c++  -Wall -Wextra -Werror -std=c++98 -pedantic
 SRC= main.cpp
 OBJ=$(SRC:.cpp=.o)
 

@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 
+#define ALLOC_ERR "ALLOC ERROR"
+
 class Zombie
 {
 	private:
@@ -9,7 +11,7 @@ class Zombie
 	public:
 		Zombie();
 		~Zombie();
-		
+	
 		void add_name_for_private_variable(std::string incomingName) {Name = incomingName;}
 		void announce(void);
 };

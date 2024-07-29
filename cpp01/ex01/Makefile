@@ -1,4 +1,4 @@
-CC=c++ -std=c++98 -pedantic
+CC=c++  -Wall -Wextra -Werror -g -std=c++98 -pedantic
 SRC=Zombie.cpp zombieHorde.cpp main.cpp
 OBJ=$(SRC:.cpp=.o)
 
